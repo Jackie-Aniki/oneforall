@@ -277,13 +277,15 @@ class Scene extends scene_ssr_1.SceneSSR {
   /**
    * add body font family to set font of pixi-stats
    */
-  showFPS(style = 'position: fixed; top: 0; right: 0; z-index: 1000;') {
+  showFPS(style) {
     const stats = new pixi_stats_1.Stats(
       this.pixi.renderer,
       this.pixi.ticker,
       document.body
     );
-    stats.domElement.setAttribute('style', style);
+    if (style) {
+      stats.domElement.setAttribute('style', style);
+    }
   }
   onUpdateDebug(graphics) {
     var _a, _b, _c, _d, _e, _f;

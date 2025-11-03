@@ -4010,10 +4010,10 @@ pixi-shim@^2.6.2:
     jsdom "24.1.0"
     jsdom-global "*"
 
-pixi-stats@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/pixi-stats/-/pixi-stats-5.0.2.tgz#dece3e3b0933628b0c3d4780fe5239c5a93a7cf1"
-  integrity sha512-WIHLLUNyu9gDDZOc/tuUC+NdfHWoyGWBGDhrttHphfmToXdrz6/rVjyaVX5cTPYvPrSwJVVWYeVC3VX7UjUPSQ==
+pixi-stats@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/pixi-stats/-/pixi-stats-5.0.3.tgz#91b790b5650a23469ce4fbeb5da752fee957f4ef"
+  integrity sha512-eVRi8oQ4cghdo0EZyd8fn+YBkrkABKRK6u5Gi+CCWwN0itLFKJZc8jgJ02S/uGDeioGYXB6ZtW0m6ick5ne6XA==
 
 pixi.js-legacy@^7:
   version "7.4.3"
