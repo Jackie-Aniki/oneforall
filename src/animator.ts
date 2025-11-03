@@ -5,7 +5,7 @@ import { Lifecycle, LifecycleParent, LifecycleProps } from './lifecycle';
 import { GameObject } from './game-object';
 import { StateMachine } from './state-machine';
 import { Subject } from 'rxjs/internal/Subject';
-import { Vector } from 'detect-collisions';
+import { Vector } from 'check2d';
 import { PIXITexture } from './model';
 
 export interface AnimatorData {

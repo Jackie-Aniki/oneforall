@@ -1,4 +1,4 @@
-import { BodyOptions, Ellipse } from 'detect-collisions';
+import { BodyOptions, Ellipse } from 'check2d';
 import { Subject } from 'rxjs/internal/Subject';
 
 import { GameObject } from './game-object';

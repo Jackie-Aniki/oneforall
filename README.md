@@ -1,12 +1,12 @@
 # One For All
 
-<img src="https://raw.githubusercontent.com/Prozi/oneforall/main/all-might.png" alt="All Might from Boku No Hero Academia holds One For All in his palm" width="456" height="456" style="image-rendering: pixelated; max-width: 100%;" />
+<img src="https://raw.githubusercontent.com/Jackie-Aniki/oneforall/main/all-might.png" alt="All Might from Boku No Hero Academia holds One For All in his palm" width="456" height="456" style="image-rendering: pixelated; max-width: 100%;" />
 
 ### TypeScript gamedev library inspired by Unity
 
 [<img src="https://img.shields.io/npm/v/@pietal.dev/engine?style=for-the-badge&color=success" alt="npm version" />](https://www.npmjs.com/package/@pietal.dev/engine?activeTab=versions)
-[<img src="https://img.shields.io/circleci/build/github/Prozi/oneforall/main?style=for-the-badge" alt="build status" />](https://app.circleci.com/pipelines/github/Prozi/oneforall)
-[<img src="https://img.shields.io/npm/l/@pietal.dev/engine.svg?style=for-the-badge&color=success" alt="license: MIT" />](https://github.com/Prozi/oneforall/blob/master/LICENSE)
+[<img src="https://img.shields.io/circleci/build/github/Jackie-Aniki/oneforall/main?style=for-the-badge" alt="build status" />](https://app.circleci.com/pipelines/github/Jackie-Aniki/oneforall)
+[<img src="https://img.shields.io/npm/l/@pietal.dev/engine.svg?style=for-the-badge&color=success" alt="license: MIT" />](https://github.com/Jackie-Aniki/oneforall/blob/master/LICENSE)
 
 ## Demo
 
@@ -20,9 +20,9 @@
             └──[1x StateMachine]
 ```
 
-Tiny code, big results! Check out the [demo](https://prozi.github.io/oneforall/demo/?fps&debug) to see below code in action.
+Tiny code, big results! Check out the [demo](https://jackie-aniki.github.io/oneforall/demo/?fps&debug) to see below code in action.
 
-Also, here is the [documentation](https://prozi.github.io/oneforall/modules.html).
+Also, here is the [documentation](https://jackie-aniki.github.io/oneforall/modules.html).
 
 ## Demo Code
 
@@ -187,78 +187,78 @@ npm i @pietal.dev/engine -D
 ## We also have tests
 
 ```
- PASS  src/state-machine.spec.ts
-  GIVEN StateMachine
-    ✓ THEN you can set validators (4 ms)
-    ✓ THEN you can't change state to invalid state
-    ✓ THEN you can change state to valid state
-
  PASS  src/component.spec.ts
   GIVEN Component
-    ✓ THEN update publishes update$ (1 ms)
-    ✓ THEN destroy publishes destroy$
+    ✓ THEN update publishes update$ (12 ms)
+    ✓ THEN destroy publishes destroy$ (2 ms)
 
- PASS  src/circle-body.spec.ts
-  GIVEN CircleBody
-    ✓ THEN it has set property radius (5 ms)
-    ✓ THEN it can't have zero radius (9 ms)
-    ✓ THEN update propagates x/y changes
-
- PASS  src/scene-ssr.spec.ts
-  GIVEN SceneBase
-    ✓ THEN it works (3 ms)
-    ✓ THEN it can have children (1 ms)
-    ✓ THEN scene propagates update to gameobject to component (1 ms)
-
- PASS  src/scene.spec.ts
-  GIVEN Scene
-    ✓ THEN it works (2 ms)
-    ✓ THEN it can have children
-    ✓ THEN scene propagates update to gameobject to component (1 ms)
-
- PASS  src/sprite.spec.ts
-  GIVEN Sprite
-    ✓ THEN update propagates x/y changes (3 ms)
-    ✓ THEN removeChild works
-    ✓ THEN destroy works (1 ms)
-    ✓ THEN destroy works extended (1 ms)
-
- PASS  src/prefab.spec.ts
-  GIVEN Prefab
-    ✓ THEN can be instantiated (3 ms)
-    ✓ THEN can create 100 instances (10 ms)
-
- PASS  src/game-object.spec.ts
-  GIVEN GameObject
-    ✓ THEN you can add component (5 ms)
-    ✓ THEN update propagates to components (1 ms)
-    ✓ THEN you can remove component
-    ✓ THEN destroy removes component (1 ms)
-    ✓ THEN you can get component by label
-    ✓ THEN you can get components by label
-    ✓ THEN you can destroy 1000 bodies without problem (106 ms)
+ PASS  src/state-machine.spec.ts
+  GIVEN StateMachine
+    ✓ THEN you can set validators (1 ms)
+    ✓ THEN you can't change state to invalid state (3 ms)
+    ✓ THEN you can change state to valid state (4 ms)
 
  PASS  src/polygon-body.spec.ts
   GIVEN PolygonBody
-    ✓ THEN update propagates x/y changes
-
- PASS  src/container.spec.ts
-  GIVEN Container
-    ✓ THEN update propagates x/y changes
-    ✓ THEN destroy works (1 ms)
-
- PASS  src/resources.spec.ts
-  GIVEN Resources
-    ✓ THEN it silently fails and proceeds (5 ms)
+    ✓ THEN update propagates x/y changes (10 ms)
 
  PASS  src/index.spec.ts
   GIVEN index.ts
-    ✓ THEN basic imports work (1 ms)
+    ✓ THEN basic imports work (9 ms)
 
- PASS  src/application.spec.ts
-  GIVEN Application
-    ✓ THEN it works
+ PASS  src/scene-ssr.spec.ts
+  GIVEN SceneSSR
+    ✓ THEN it works (6 ms)
+    ✓ THEN it can have children (1 ms)
+    ✓ THEN scene propagates update to gameobject to component (3 ms)
 
-Test Suites: 13 passed, 13 total
-Tests:       33 passed, 33 total
+ PASS  src/circle-body.spec.ts
+  GIVEN CircleBody
+    ✓ THEN it has set property radius (11 ms)
+    ✓ THEN it can't have zero radius (18 ms)
+    ✓ THEN update propagates x/y changes (2 ms)
+
+ PASS  src/box-body.spec.ts
+  GIVEN CircleBody
+    ✓ THEN it has set property width and height (10 ms)
+    ✓ THEN it has set property width but no height (1 ms)
+    ✓ THEN it can't have zero width (20 ms)
+    ✓ THEN it can't have zero height (3 ms)
+    ✓ THEN update propagates x/y changes (3 ms)
+
+ PASS  src/container.spec.ts
+  GIVEN Container
+    ✓ THEN update propagates x/y changes (6 ms)
+    ✓ THEN destroy works (2 ms)
+
+ PASS  src/sprite.spec.ts
+  GIVEN Sprite
+    ✓ THEN update propagates x/y changes (7 ms)
+    ✓ THEN removeChild works (13 ms)
+    ✓ THEN destroy works (1 ms)
+    ✓ THEN destroy works extended (2 ms)
+
+ PASS  src/scene.spec.ts
+  GIVEN Scene
+    ✓ THEN it works (16 ms)
+    ✓ THEN it can have children (3 ms)
+    ✓ THEN scene propagates update to gameobject to component (3 ms)
+
+ PASS  src/prefab.spec.ts
+  GIVEN Prefab
+    ✓ THEN can be instantiated (10 ms)
+    ✓ THEN can create 100 instances (45 ms)
+
+ PASS  src/game-object.spec.ts
+  GIVEN GameObject
+    ✓ THEN you can add component (6 ms)
+    ✓ THEN update propagates to components (2 ms)
+    ✓ THEN you can remove component (1 ms)
+    ✓ THEN destroy removes component (1 ms)
+    ✓ THEN you can get component by label (1 ms)
+    ✓ THEN you can get components by label (1 ms)
+    ✓ THEN you can destroy 1000 bodies without problem (296 ms)
+
+Test Suites: 1 skipped, 12 passed, 12 of 13 total
+Tests:       1 skipped, 36 passed, 37 total
 ```

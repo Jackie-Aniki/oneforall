@@ -1,4 +1,4 @@
-import { BodyOptions, Polygon, Vector } from 'detect-collisions';
+import { BodyOptions, Polygon, Vector } from 'check2d';
 import { Lifecycle, LifecycleParent, LifecycleProps } from './lifecycle';
 
 import { GameObject } from './game-object';

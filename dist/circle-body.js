@@ -1,10 +1,10 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.CircleBody = void 0;
-const detect_collisions_1 = require('detect-collisions');
+const check2d_1 = require('check2d');
 const Subject_1 = require('rxjs/internal/Subject');
 const lifecycle_1 = require('./lifecycle');
-class CircleBody extends detect_collisions_1.Ellipse {
+class CircleBody extends check2d_1.Ellipse {
   constructor(gameObject, radiusX, radiusY = radiusX, step = 16, options) {
     super(gameObject, radiusX, radiusY, step, options);
     /**

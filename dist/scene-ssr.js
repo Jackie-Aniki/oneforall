@@ -1,7 +1,7 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.SceneSSR = void 0;
-const detect_collisions_1 = require('detect-collisions');
+const check2d_1 = require('check2d');
 const game_object_1 = require('./game-object');
 const Subject_1 = require('rxjs/internal/Subject');
 /**
@@ -23,7 +23,7 @@ class SceneSSR extends game_object_1.GameObject {
      */
     this.animationFrame = 0;
     this.options = options;
-    this.physics = new detect_collisions_1.System(options.nodeMaxEntries);
+    this.physics = new check2d_1.System(options.nodeMaxEntries);
   }
   /**
    * Scene doesn't have parent scene

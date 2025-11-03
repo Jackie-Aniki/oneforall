@@ -5,7 +5,7 @@ exports.update = update;
 const game_object_1 = require('../game-object');
 const animator_1 = require('../animator');
 const circle_body_1 = require('../circle-body');
-const detect_collisions_1 = require('detect-collisions');
+const check2d_1 = require('check2d');
 const operators_1 = require('rxjs/operators');
 function create({ scene, data, texture }) {
   // create game object
@@ -54,7 +54,7 @@ function update(gameObject, deltaTime) {
   }
   if (
     gameObject.target &&
-    (0, detect_collisions_1.distance)(gameObject.target, gameObject) < 9
+    (0, check2d_1.distance)(gameObject.target, gameObject) < 9
   ) {
     gameObject.target = null;
   }

@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { PIXIAppOptions, SceneOptions, SceneSSR } from './scene-ssr';
-import { Body } from 'detect-collisions';
+import { Body } from 'check2d';
 import { LifecycleProps } from './lifecycle';
 import { Resources } from './resources';
 import { Subject } from 'rxjs/internal/Subject';
@@ -13,7 +13,7 @@ export declare class Scene<TBody extends Body = Body> extends SceneSSR<TBody> {
   resources: Resources;
   pixi: PIXI.Application;
   isInitialized: boolean;
-  stage: PIXI.Container<PIXI.ContainerChild>;
+  stage: PIXI.Container<PIXI.DisplayObject>;
   /**
    * When disableAutoSort is called, it emits this subject.
    */

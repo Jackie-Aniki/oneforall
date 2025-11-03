@@ -1,4 +1,4 @@
-import { BodyOptions, Box } from 'detect-collisions';
+import { BodyOptions, Box } from 'check2d';
 import { Subject } from 'rxjs/internal/Subject';
 import { GameObject } from './game-object';
 import { LifecycleParent, LifecycleProps } from './lifecycle';

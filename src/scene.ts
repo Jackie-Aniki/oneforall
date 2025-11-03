@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 import { DIContainer, Inject } from 'inject.min';
 import { PIXIAppOptions, SceneOptions, SceneSSR } from './scene-ssr';
 
-import { Body } from 'detect-collisions';
+import { Body } from 'check2d';
 import { LifecycleProps } from './lifecycle';
 import { Resources } from './resources';
 import { Stats } from 'pixi-stats';
@@ -220,8 +220,8 @@ export class Scene<TBody extends Body = Body> extends SceneSSR<TBody> {
   showFPS(style = 'position: fixed; top: 0; right: 0; z-index: 1000;'): void {
     const stats = new Stats(
       this.pixi.renderer as PIXIWebGLRenderer,
-      document.body,
-      this.pixi.ticker
+      this.pixi.ticker,
+      document.body
     );
 
     stats.domElement.setAttribute('style', style);

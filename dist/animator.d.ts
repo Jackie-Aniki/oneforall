@@ -3,7 +3,7 @@ import { LifecycleParent, LifecycleProps } from './lifecycle';
 import { GameObject } from './game-object';
 import { StateMachine } from './state-machine';
 import { Subject } from 'rxjs/internal/Subject';
-import { Vector } from 'detect-collisions';
+import { Vector } from 'check2d';
 import { PIXITexture } from './model';
 export interface AnimatorData {
   animations: Record<string, number[]>;
@@ -72,7 +72,7 @@ export declare class Animator extends PIXI.Container implements LifecycleProps {
   /**
    * Reference to inner animation scale.
    */
-  get scale(): PIXI.ObservablePoint;
+  get scale(): PIXI.ObservablePoint<any>;
   /**
    * @param deltaTime = 1.0 for 60FPS
    */

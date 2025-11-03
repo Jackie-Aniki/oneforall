@@ -2,7 +2,7 @@ import { GameObject, TGameObject } from '../game-object';
 
 import { Animator } from '../animator';
 import { CircleBody } from '../circle-body';
-import { distance } from 'detect-collisions';
+import { distance } from 'check2d';
 import { takeUntil } from 'rxjs/operators';
 
 export function create({ scene, data, texture }): TGameObject {

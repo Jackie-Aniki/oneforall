@@ -1,4 +1,4 @@
-import { Body, System } from 'detect-collisions';
+import { Body, System } from 'check2d';
 import { GameObject, GameObjectParent, TGameObject } from './game-object';
 import { Lifecycle, LifecycleProps } from './lifecycle';
 

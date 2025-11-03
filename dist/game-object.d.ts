@@ -5,7 +5,7 @@ import { Prefab } from './prefab';
 import { Scene } from './scene';
 import { SceneSSR } from './scene-ssr';
 import { Subject } from 'rxjs/internal/Subject';
-import { Vector } from 'detect-collisions';
+import { Vector } from 'check2d';
 export interface TGameObject<TSprite = Animator, TBody = CircleBody>
   extends GameObject {
   body: TBody;

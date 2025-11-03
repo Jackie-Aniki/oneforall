@@ -48,7 +48,7 @@ var __decorate =
       for (var i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+    return (c > 3 && r && Object.defineProperty(target, key, r), r);
   };
 var __importStar =
   (this && this.__importStar) ||
@@ -280,8 +280,8 @@ class Scene extends scene_ssr_1.SceneSSR {
   showFPS(style = 'position: fixed; top: 0; right: 0; z-index: 1000;') {
     const stats = new pixi_stats_1.Stats(
       this.pixi.renderer,
-      document.body,
-      this.pixi.ticker
+      this.pixi.ticker,
+      document.body
     );
     stats.domElement.setAttribute('style', style);
   }
