@@ -7,50 +7,51 @@ Game FrameWork for JavaScript 2D WebGL Games. Unity-inspired architecture: GameO
 ## Why use this?
 
 After making countless indie games, dozens made in html5 webgl, I like to have in such:
+
 1. efficient and mobile friendly drawing ✔️ (pixi)
 2. lifecycle management ✔️ (solution below)
 3. efficient collision detection or physics ✔️ (make2d)
 
 ### Lifecycle management problem
 
-* When you create a game world, its good to organize it in a tree like way of hierarchy of objects.
-* Let's take almost any entity in any game, most likely it has some stuff attached in this hierarchy (a home might have some chairs, a tank might have a driver and ammunition, etc.)
-* If you don't properly manage destroying an entity, stuff it had attached to it will become a memory leak and kill the app.
+- When you create a game world, its good to organize it in a tree like way of hierarchy of objects.
+- Let's take almost any entity in any game, most likely it has some stuff attached in this hierarchy (a home might have some chairs, a tank might have a driver and ammunition, etc.)
+- If you don't properly manage destroying an entity, stuff it had attached to it will become a memory leak and kill the app.
 
 ### Lifecycle management solution
 
-* So, [all classes](https://jackie-aniki.github.io/make2d/hierarchy.html#Lifecycle) of this framework implement [LifecycleProps](https://jackie-aniki.github.io/make2d/interfaces/LifecycleProps.html).
-* When a Lifecycle is destroyed, it emits and closes `destroy$` event subject.
-* Along with destroying his children, which in turn behave the same.
+- So, [all classes](https://jackie-aniki.github.io/make2d/hierarchy.html#Lifecycle) of this framework implement [LifecycleProps](https://jackie-aniki.github.io/make2d/interfaces/LifecycleProps.html).
+- When a Lifecycle is destroyed, it emits and closes `destroy$` event subject.
+- Along with destroying his children, which in turn behave the same.
 
 ## Usage
 
 ```ts
-import { Scene, GameObject } from 'make2d'
+import { Scene, GameObject } from 'make2d';
 
 // create a scene
 const scene = new Scene({
   visible: true,
   autoSort: true
-})
+});
 
 // enable physics for scene
 scene.update$.pipe(takeUntil(scene.destroy$)).subscribe(() => {
-  scene.physics.separate()
-})
+  scene.physics.separate();
+});
 
 // create entity
-const gameObject = new GameObject('Entity Name')
+const gameObject = new GameObject('Entity Name');
 
 // add entity to scene
-scene.addChild(gameObject)
+scene.addChild(gameObject);
 
 // rxjs - subscribe to update function until entity is destroyed
 gameObject.update$
   .pipe(takeUntil(gameObject.destroy$))
   .subscribe((deltaTime) => {
-    gameObject.update(gameObject, deltaTime)
-  })
+    gameObject.update(gameObject, deltaTime);
+  });
 ```
 
 ## Demo Structure
